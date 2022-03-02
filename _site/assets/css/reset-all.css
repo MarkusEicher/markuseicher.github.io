@@ -3,6 +3,10 @@
    License: none (public domain)
 */
 
+/* This is a hard reset of all defaults leaving everything
+unstyled. We plan to use this for bare HTML pages without any
+CSS applied. */
+
 html, body, div, span, applet, object, iframe,
 h1,h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,7 +50,3 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* 
-h1 {
-	color:red;
-} */

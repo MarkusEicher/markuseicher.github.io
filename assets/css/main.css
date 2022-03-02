@@ -1,9 +1,37 @@
+/* Derived from Jen Simmons editorial YouTube Video
+"Using Flexbox + CSS Grid Together: Easy Gallery Layout"
+https://youtu.be/dQHtT47eH0M */
+
+/* These are our default settings for this profile page project. They
+are applied for and understand by all browsers. Minimal Viable Pageview
+for all users, no matter on which browser or device they view the page. */
+
+* {
+  box-sizing: border-box; /* Jenn Simmons setting  - EVALUATION*/
+}
 body {
-    background-color: darkgray;
-    text-align: center;
+  padding: 1rem; /* Jenn Simmons setting */
+  background-color: darkgray; /* temp */
+  text-align: center; /* temp */
 }
 
 img {
-  max-width: 90vw;
-  height: auto;
+  width: 300px; /* temp */
+  height: auto; /* temp */
+}
+
+main {
+  max-width: 500px; /* Jenn Simmons setting */
+  margin: 0 auto; /* Jenn Simmons setting */
+}
+article {
+  margin: 1rem 0; /* Jenn Simmons setting */
+}
+
+/*  */
+@supports (display: flex) {
+  main { 
+    max-width: 10000px;
+    margin: 0;
+  }
 }
