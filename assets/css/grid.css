@@ -26,9 +26,11 @@ Now lets do a Grid-based layout
     max-width: 10000px;
     margin: 0;
   }
+
   article {
     margin: 0;
   }
+
   .deals {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
