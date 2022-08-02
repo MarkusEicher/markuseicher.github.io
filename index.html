@@ -1,14 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/main.css">
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
     <title>Markus Eicher Welcome Page</title>
 
 </head>
 <body>
-    <h1>Welcome</h1>
+     <nav class="site-nav grid">
+    <h1>Markus Eicher Welcome Page</h1>
+    <ul>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#about">About me</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <section id="welcome" class="grid">
+    <div class="welcome-text">
+      <h2>Let's build something great together<br />& let's do it in public</h2>
+      <p class="leading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo consequat.</p>
+      <a href="#portfolio" class="button">View my work</a>
+    </div>
+    <div class="welcome-img">
+      <img src="assets/Profile-MKE-small.png" alt="Profile Picture of Markus Eicher, showing him facial towards the camera">
+    </div>
+  </section>
+  <section id="portfolio">
+    <h3>Some of my Projects</h3>
+    <div class="projects grid">
+      <a href="#">
+        <img src="assets/Einstein-Zitat.jpg" alt="Placeholder">
+        <h4>AntiFoodwastePLatform</h4>
+      </a>
+      <a href="#">
+        <img src="assets/Einstein-Zitat - Kopie.jpg" alt="Placeholder">
+        <h4>LearnToCodeCompanion</h4>
+      </a>
+      <a href="#">
+        <img src="assets/Einstein-Zitat - Kopie (2).jpg" alt="Placeholder">
+        <h4>Captain Cosmo Blog</h4>
+      </a>
+    </div>
+  </section>
+  <section id="about">
+    <h3>Something about me</h3>
+    <ul class="grid">
+      <li>
+        <img src="assets/Einstein-Zitat - Kopie (3).jpg" alt="Placeholder-HTML">
+        <h4>Personal</h4>
+      </li>
+      <li>
+        <img src="assets/Einstein-Zitat - Kopie (4).jpg" alt="Placeholder-CSS">
+        <h4>CV</h4>
+      </li>
+      <li>
+        <img src="assets/Einstein-Zitat - Kopie (5).jpg" alt="Placeholder-SEO">
+        <h4>4Fun</h4>
+      </li>
+      <li>
+        <img src="assets/Einstein-Zitat - Kopie (6).jpg" alt="placeholder">
+        <h4>BucketList</h4>
+      </li>
+    </ul>
+    <p class="leading">Here I tell you who I am and what I'm doing</p>
+  </section>
+  <section id="contact">
+    <h3>Get In Touch</h3>
+    <p class="leading">Lorem ipsum dolor sit amet, consectetur.</p>
+    <form>
+      <input type="text" placeholder='NAME'>
+      <input type="email" placeholder='EMAIL'>
+      <textarea placeholder='YOUR MESSAGE'></textarea>
+      <button class="button">Send Flare</button>
+    </form>
+  </section>
+  <footer>
+    <div class="grid">
+      <p class="copyright">Copyright 2022 Markus Eicher</p>
+      <ul class="social">
+        <li><a href="#"><img src="assets/Einstein-Zitat - Kopie (7).jpg" alt="facebook"></a></li>
+        <li><a href="#"><img src="assets/Einstein-Zitat - Kopie (8).jpg" alt="twitter"></a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>
