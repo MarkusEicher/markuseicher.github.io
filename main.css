@@ -12,7 +12,7 @@ for all users, no matter on which browser or device they view the page. */
 }
 body {
   padding: 1rem; /* Jenn Simmons setting */
-  background-color: darkgray; /* temp */
+  background-color: rgb(188, 233, 27); /* temp */
   text-align: center; /* temp */
 }
 
@@ -29,10 +29,10 @@ article {
   margin: 1rem 0; /* Jenn Simmons setting */
 }
 
-/*  */
+/*  
 @supports (display: grid) {
   main { 
     max-width: 10000px;
     margin: 0;
   }
-}
+}*/
