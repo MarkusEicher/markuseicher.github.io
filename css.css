@@ -1,14 +1,78 @@
-/* minimalistic reset */
+/* minimalistic reset following Jen Simmons 
 *,
 *::before,
 *::after {
-  box-sizing: border-box; /* Jenn Simmons setting */
+  box-sizing: border-box;
 }
 
 img {
-  width: 120px; /* temp */
-  height: auto; /* temp */
-} 
+  width: 120px; 
+  height: auto; 
+} */
+
+/* Full reset following Myers */
+
+/* 	These settings are derived from the following source:
+	http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
+*/
+
+/* This is a hard reset of all defaults leaving everything
+unstyled. We plan to use this for bare HTML pages without any
+default styling applied. In most cases we don't use this for
+regular projects. An alternative to this hard reset is to use
+normalize https://github.com/necolas/normalize.css/ . This is
+less invasive and we probably will prefer normalize over reset.
+Normalize will be documented in normalize.css.
+*/
+
+html, body, div, span, applet, object, iframe,
+h1,h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+      /* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 
 /* variables */
 :root{
@@ -22,7 +86,7 @@ img {
 /* fonts */
 @font-face {
   font-family: 'Rubik Regular';
-  src: url("assets/fonts/Rubik-Regular.ttf") format("ttf"),
+  src: url("/assets/fonts/Rubik-Regular.ttf") format("ttf"),
 }
 
 body {
@@ -33,6 +97,7 @@ body {
 .mainwrapper{
   display:grid;
   height: 100vh;
+  width: 100vw;
   grid-template-columns: 1fr;
   grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
   grid-template-areas:
@@ -82,14 +147,15 @@ footer {
 
 /* Navigation bar with flexbox mobile first - default setting */
 .navlist {
-  background: white;
-  box-shadow: 0px 0px 10px var(--secondary);
+  background:var(--primary);
+  /* box-shadow: 0px 0px 10px var(--secondary); */
   padding: 1rem 0;
-  border-radius: var(--radius);
+  /* border-radius: var(--radius); */
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content:center;
+  align-items:center;
   flex-direction: column;
+  width:100vw;
 }
 
 .navitem {
@@ -125,7 +191,7 @@ footer {
 }
 
 /* phone styles */
-@media screen and (min-width: 360px){
+/* @media screen and (min-width: 360px){
   
   .mainwrapper {
   display: grid;
@@ -150,7 +216,7 @@ footer {
   flex-direction: row;
 }
 }
-
+ */
 /* small tablet styles */
 @media screen and (min-width: 620px){
 }
