@@ -1,50 +1,63 @@
 /* minimalistic reset */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box; /* Jenn Simmons setting */
 }
-/* body {
-  padding: 1rem; /* Jenn Simmons setting 
-} */
 
 img {
   width: 120px; /* temp */
   height: auto; /* temp */
 } 
 
-/* xxxxxxxxxxxx */
-
 /* variables */
 :root{
   --primary: #FFC636;
   --secondary: #0A0B5B;
   --tertiary: #288105;
+  --main-radius: 5px;
+  --main-padding: 5px;
 }
 
-.mainwrapper {
-  display: grid;
+/* fonts */
+@font-face {
+  font-family: 'Rubik Regular';
+  src: url("assets/fonts/Rubik-Regular.ttf") format("ttf"),
+}
+
+body {
+  font-family: 'Rubik Regular';
+}
+
+/* Grid layout for mobile first - default setting */
+.mainwrapper{
+  display:grid;
   height: 100vh;
-  grid-template-columns: 1fr, 1fr, 1fr, 1fr;
-  grid-template-rows: 0.1fr, 1.5fr, 1fr, 0.6fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
   grid-template-areas:
-    "nav nav nav nav"
-    "sidebar main main main"
-    "sidebar content1 content2 content3"
-    "sidebar footer footer footer";
+    "nav"
+    "sidebar"
+    "main"
+    "content1"
+    "content2"
+    "content3"
+    "footer";
 }
-
 
 nav {
   background: #a7ffeb;
   grid-area: nav;
 }
-main {
-  background: #84ffff;
-  grid-area: main;
-}
 
 #sidebar {
   background: #18ffff;
   grid-area: sidebar;
+}
+
+main {
+  background: #84ffff;
+  grid-area: main;
 }
 
 #content1 {
@@ -65,4 +78,87 @@ main {
 footer {
   background: #1de9b6;
   grid-area: footer;
+}
+
+/* Navigation bar with flexbox mobile first - default setting */
+.navlist {
+  background: white;
+  box-shadow: 0px 0px 10px var(--secondary);
+  padding: 1rem 0;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.navitem {
+  list-style: none;
+  margin-right: 2rem;
+}
+
+.navitem a {
+  text-decoration: none;
+  color: black;
+  transition: all 200ms ease-in;
+}
+
+.navitem a:hover {
+  color: var(--clr-primary-dark);
+}
+
+.navitem img{
+  width:5rem;
+  height:5rem;
+  object-fit:cover;
+  border-radius:50%;
+  margin-left: 0;
+  padding-left: auto;
+  margin-right: auto;
+}
+
+/* Media queries mobile first ascending in viewport sizes */
+
+/* watch styles */
+@media only screen and (min-width: 160px) {
+  
+}
+
+/* phone styles */
+@media screen and (min-width: 360px){
+  
+  .mainwrapper {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 1.5fr 1fr 0.6fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+  } 
+
+  .navlist {
+  background: white;
+  box-shadow: 0px 0px 10px var(--secondary);
+  padding: 1rem 0;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+}
+
+/* small tablet styles */
+@media screen and (min-width: 620px){
+}
+
+/* large tablet & laptop styles */
+@media screen and (min-width: 960px){
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px){
 }
