@@ -1,30 +1,26 @@
-/* minimalistic reset following Jen Simmons 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+/* 
+This is the start of the explanatory version of the CSS used
+to build this project. It will be part of the "Learn to code companion"
+project by Markus Eicher on GitHub. The goal of that project is to
+provide relevant, managed and peer-reviewed content for people that
+learn to code or as a reference for developers.
+*/
 
-img {
-  width: 120px; 
-  height: auto; 
-} */
+/* Start of full reset following Myers. 
 
-/* Full reset following Myers */
+We do a full fledged reset of all the basic browser behaviors to start
+with a most identical baseline on most systems currently in use. This is a 
+hard reset of all defaults leaving everything unstyled. We plan to use this 
+for bare HTML pages without any default styling applied. In most cases we 
+don't use this for all projects. An alternative to this hard reset is to use
+normalize https://github.com/necolas/normalize.css/ . This is less invasive 
+and we probably will prefer normalize over reset. 
 
-/* 	These settings are derived from the following source:
+These settings are derived from the following source:
+
 	http://meyerweb.com/eric/tools/css/reset/ 
 	v2.0 | 20110126
 	License: none (public domain)
-*/
-
-/* This is a hard reset of all defaults leaving everything
-unstyled. We plan to use this for bare HTML pages without any
-default styling applied. In most cases we don't use this for
-regular projects. An alternative to this hard reset is to use
-normalize https://github.com/necolas/normalize.css/ . This is
-less invasive and we probably will prefer normalize over reset.
-Normalize will be documented in normalize.css.
 */
 
 html, body, div, span, applet, object, iframe,
@@ -47,9 +43,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
-      /* HTML5 display-role reset for older browsers */
-
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -72,18 +65,28 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* End of full reset following Myers. */
 
 
-/* variables */
+/* Start of global declarations 
+Here we define global settings and variables used in the project. We define
+basic colors and values that we want to be consistent during the whole process.
+*/
+
+/* Start of variables definition */
 :root{
   --primary: #FFC636;
   --secondary: #0A0B5B;
   --tertiary: #288105;
-  --main-radius: 5px;
-  --main-padding: 5px;
 }
+/* End of variables definition */
 
-/* fonts */
+/* Start of fonts definition 
+If we use fonts as filebased versions downloaded and made accessible to the 
+browser from the assets on the server, we declare them here globally. This is not
+necessary if fonts are used from the web like Google Fonts or others.
+*/
+
 @font-face {
   font-family: 'Rubik Regular';
   src: url("/assets/fonts/Rubik-Regular.ttf") format("ttf"),
@@ -92,6 +95,17 @@ table {
 body {
   font-family: 'Rubik Regular';
 }
+/* End of fonts definition */
+
+/* Start of basic version for all browsers and screenreaders. Setting the minimal
+viable experience with the webpage. The goal is to have a mobile first version of 
+the page with all the necessary information readable on every device that can show 
+webpages. */
+
+@supports not (display: grid) {
+   /* code that will only run if CSS Grid is supported by the browser  */
+ }
+
 
 /* Grid layout for mobile first - default setting */
 .mainwrapper{
@@ -155,7 +169,7 @@ footer {
   justify-content:center;
   align-items:center;
   flex-direction: column;
-  width:100vw;
+  width:100vw; 
 }
 
 .navitem {
@@ -191,7 +205,7 @@ footer {
 }
 
 /* phone styles */
-/* @media screen and (min-width: 360px){
+@media screen and (min-width: 360px){
   
   .mainwrapper {
   display: grid;
@@ -206,19 +220,44 @@ footer {
   } 
 
   .navlist {
-  background: white;
-  box-shadow: 0px 0px 10px var(--secondary);
+  background:var(--primary);
+  /* box-shadow: 0px 0px 10px var(--secondary); */
   padding: 1rem 0;
-  border-radius: var(--radius);
+  /* border-radius: var(--radius); */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+}
+}
+
+/* small tablet styles */
+@media screen and (min-width: 480px){
+
+  .mainwrapper {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 1.5fr 1fr 0.6fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+  } 
+
+  .navlist {
+  background:var(--primary);
+  /* box-shadow: 0px 0px 10px var(--secondary); */
+  padding: 1rem 0;
+  /* border-radius: var(--radius); */
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
+  width: 100vw;
 }
-}
- */
-/* small tablet styles */
-@media screen and (min-width: 620px){
 }
 
 /* large tablet & laptop styles */
