@@ -5,7 +5,8 @@ basic colors and values that we want to be consistent during the whole process.
 
 /* Start of variables definition */
 :root{
-  --primary: #FFC636;
+  /* --primary: #FFC636; */
+  --primary: #CC9933;
   --secondary: #0A0B5B;
   --tertiary: #288105;
 }
@@ -38,7 +39,7 @@ the page with all the necessary information readable on every device that can sh
 webpages. */
 
 body{
-    background-color:var(--primary);
+    /* background-color:var(--primary); */
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -47,6 +48,9 @@ body{
   /* background-color:var(--secondary); */
   padding: 1em;
   /* width: 1vh; */
+}
+.navitem img{
+  width: 200px;
 }
 
 /* P, a, img{
