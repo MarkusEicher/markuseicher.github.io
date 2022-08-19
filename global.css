@@ -11,21 +11,26 @@ basic colors and values that we want to be consistent during the whole process.
 }
 /* End of variables definition */
 
+
+
 /* Start of fonts definition 
 If we use fonts as filebased versions downloaded and made accessible to the 
 browser from the assets on the server, we declare them here globally. This is not
 necessary if fonts are used from the web like Google Fonts or others.
 */
 
-@font-face {
+/* @font-face {
   font-family: 'Rubik Regular';
   src: url("/assets/fonts/Rubik-Regular.ttf") format("ttf"),
 }
 
-body {
-  font-family: 'Rubik Regular';
+body{
+  font-family:'Rubik-Regular';
 }
+ */
 /* End of fonts definition */
+
+
 
 /* Start of basic version for all browsers and screenreaders. Setting the minimal
 viable experience with the webpage. The goal is to have a mobile first version of 
@@ -33,6 +38,21 @@ the page with all the necessary information readable on every device that can sh
 webpages. */
 
 body{
-    margin-left: 20px;
-    margin-top: 20px; 
+    background-color:var(--primary);
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+.navlist{
+  display: block;
+  /* background-color:var(--secondary); */
+  padding: 1em;
+  /* width: 1vh; */
+}
+
+/* P, a, img{
+  width: 50%;
+  margin: 20px;
+  padding: 30px;
+  border: 2px solid #0A0B5B;
+  display: block;
+} */
