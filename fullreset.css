@@ -42,6 +42,10 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+
+body {
+    background-color: b;
+}
 ol, ul {
 	list-style: none;
 }
