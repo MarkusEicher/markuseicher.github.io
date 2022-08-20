@@ -7,18 +7,9 @@ basic colors and values that we want to be consistent during the whole process.
 :root{
   /* --primary: #FFC636; */
   --primary: #CC9933;
-  --secondary: #0A0B5B;
+  --secondary:#1313AB;
   --tertiary: #288105;
 }
-
-body {}
-
-body {
-    background-color: b;
-}
-/* End of variables definition */
-
-
 
 /* Start of fonts definition 
 If we use fonts as filebased versions downloaded and made accessible to the 
@@ -50,20 +41,71 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.navlist{
-  display: block;
-  /* background-color:var(--secondary); */
-  padding: 1em;
-  /* width: 1vh; */
-}
-.navitem img{
-  width: 200px;
+.mainwrapper{
+  text-align:center;
+  
 }
 
-/* P, a, img{
-  width: 50%;
-  margin: 20px;
-  padding: 30px;
-  border: 2px solid #0A0B5B;
-  display: block;
-} */
+header {
+  border: 2px solid red;
+  margin: 20px 5px;
+}
+
+.navlist li{
+  border: 2px solid black;
+  margin: 20px 5px;
+}
+
+.navlist::after{
+  /* content: "";
+  display:block;
+  clear:both; */
+
+}
+
+.navitem{
+  /* background-color: red;
+  float:left;
+  width: 16%;
+  margin: 1%;
+  padding: 1%;
+  height: 50px; */
+  
+}
+
+.navitem img{
+  width:auto;
+  height:50px;
+  /* background-color:green; */
+  /* padding:10px; */
+}
+
+.main{
+  border: 2px solid blue;
+  margin: 20px 5px;
+}
+
+#bio{
+  border: 2px solid green;
+  margin: 20px 5px;
+}
+
+#quote{
+  border: 2px solid maroon;
+  margin: 20px 5px;
+}
+
+#learn{
+  border: 2px solid darkorange;
+  margin: 20px 5px;
+}
+
+.sidebar {
+  border: 2px solid violet;
+  margin: 20px 5px;
+}
+
+footer {
+  border: 2px solid brown;
+  margin: 20px 5px;
+}
