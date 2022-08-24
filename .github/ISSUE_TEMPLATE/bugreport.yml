@@ -1,18 +1,20 @@
 name: Bug Report
-description: File a bug report
+description: Please tell us, what kind of problem you found
 title: "[Bug]: "
 labels: "bug"
 assignees:
   - MarkusEicher
+validations:
+      required: true
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thanks for helping us to improve our product!
   - type: input
     id: contact
     attributes:
-      label: Contact Details
+      label: How to contact you
       description: How can we get in touch with you if we need more info?
       placeholder: ex. email@example.com
     validations:
@@ -32,31 +34,19 @@ body:
       label: Version
       description: What version of our software are you running?
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - 0.9 alpha (Default)
     validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+      required: false
   - type: textarea
     id: logs
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      label: Log output or screenshot 
+      description: Please copy and paste any relevant log output or screenshots. This will be automatically formatted into code, so no need for backticks. Screenshots will be available at a later time.
       render: shell
   - type: checkboxes
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
+      description: By submitting this issue, you agree to follow our Code of Conduct
         - label: I agree to follow this project's Code of Conduct
           required: true
