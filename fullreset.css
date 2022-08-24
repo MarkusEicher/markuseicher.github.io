@@ -43,9 +43,6 @@ body {
 	line-height: 1;
 }
 
-body {
-    background-color: b;
-}
 ol, ul {
 	list-style: none;
 }
@@ -60,5 +57,13 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/* Added by Markus Eicher to have links without any styling upfront */
+a {
+	text-decoration: none;
+	list-style: none;
+	/* display: inline-block; */
+	/* color:crimson;*/
 }
 /* End of full reset following Myers. */
