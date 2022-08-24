@@ -5,7 +5,7 @@ labels: "bug"
 assignees:
   - MarkusEicher
 validations:
-      required: true
+  required: true
 body:
   - type: markdown
     attributes:
