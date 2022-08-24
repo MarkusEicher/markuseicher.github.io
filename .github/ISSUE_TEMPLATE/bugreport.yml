@@ -4,8 +4,6 @@ title: "[Bug]: "
 labels: "bug"
 assignees:
   - MarkusEicher
-validations:
-  required: true
 body:
   - type: markdown
     attributes:
