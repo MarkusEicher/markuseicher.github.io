@@ -17,15 +17,57 @@ necessary if fonts are used from the web like Google Fonts or others.
 */
 
 @font-face {
+  font-family: 'Roboto-light';
+  font-weight: 300;
+  src: url("/assets/fonts/roboto-light-webfont.woff2") format("woff2"),
+       url("/assets/fonts/roboto-light-webfont.woff") format("woff")
+}
+
+@font-face {
+  font-family: 'Roboto-light-italic';
+  font-weight: 300;
+  font-style: italic;
+  src: url("/assets/fonts/roboto-lightitalic-webfont.woff2") format("woff2"),
+       url("/assets/fonts/roboto-lightitalic-webfont.woff") format("woff")
+}
+
+@font-face {
   font-family: 'Roboto';
-  font-wight: 400;
+  font-weight: 400;
   src: url("/assets/fonts/roboto-regular-webfont.woff2") format("woff2"),
        url("/assets/fonts/roboto-regular-webfont.woff") format("woff")
 }
 
-body{
-  font-family: 'Roboto';
+@font-face {
+  font-family: 'Roboto-medium';
+  font-weight: 500;
+  src: url("/assets/fonts/roboto-medium-webfont.woff2") format("woff2"),
+       url("/assets/fonts/roboto-medium-webfont.woff") format("woff")
 }
+
+@font-face {
+  font-family: 'Roboto-medium-italic';
+  font-weight: 500;
+  font-style: italic;
+  src: url("/assets/fonts/roboto-mediumitalic-webfont.woff2") format("woff2"),
+       url("/assets/fonts/roboto-mediumitalic-webfont.woff") format("woff")
+}
+
+@font-face {
+  font-family: 'Roboto-bold';
+  font-weight: 700;
+  src: url("/assets/fonts/roboto-bold-webfont.woff2") format("woff2"),
+       url("/assets/fonts/roboto-bold-webfont.woff") format("woff")
+}
+
+@font-face {
+  font-family: 'Roboto-bold-italic';
+  font-weight: 700;
+  font-style: italic;
+  src: url("/assets/fonts/roboto-bolditalic-webfont.woff2") format("woff2"),
+       url("/assets/fonts/roboto-bolditalic-webfont.woff") format("woff")
+}
+
 /* End of fonts definition */
 
 
@@ -35,12 +77,9 @@ viable experience with the webpage. The goal is to have a mobile first version o
 the page with all the necessary information readable on every device that can show 
 webpages. */
 
-/*body{
-     background-color:
-    var(--primary); 
-    font-family: 'Courier New', Courier, monospace;
-    width: 100%;
-}*/
+body{
+  font-family: 'Roboto';
+}
 
 .mainwrapper{
   /* text-align:center; */
@@ -75,8 +114,8 @@ header {
   width: 200px;
   display: block;
   text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: bold;
+  font-family: Roboto-bold;
+  font-size: 1.2rem;
   text-decoration:none;
   text-align: center;
   /* padding: 20px; */
