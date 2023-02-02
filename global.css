@@ -5,7 +5,6 @@ basic colors and values that we want to be consistent during the whole process.
 
 /* Start of variables definition */
 :root{
-  /* --primary: #FFC636; */
   --primary: #CC9933;
   --secondary:#1313AB;
   --tertiary: #288105;
@@ -17,13 +16,15 @@ browser from the assets on the server, we declare them here globally. This is no
 necessary if fonts are used from the web like Google Fonts or others.
 */
 
-/* @font-face {
-  font-family: 'Rubik Regular';
-  src: url("/assets/fonts/Rubik-Regular.ttf") format("ttf"),
+@font-face {
+  font-family: 'Roboto';
+  font-wight: 400;
+  src: url("/assets/fonts/roboto-regular-webfont.woff2") format("woff2"),
+       url("/assets/fonts/roboto-regular-webfont.woff") format("woff")
 }
 
 body{
-  font-family:'Rubik-Regular';
+  font-family: 'Roboto';
 }
 /* End of fonts definition */
 
@@ -34,12 +35,12 @@ viable experience with the webpage. The goal is to have a mobile first version o
 the page with all the necessary information readable on every device that can show 
 webpages. */
 
-body{
-    /* background-color:
-    var(--primary); */
-    font-family: Arial, Helvetica, sans-serif;
+/*body{
+     background-color:
+    var(--primary); 
+    font-family: 'Courier New', Courier, monospace;
     width: 100%;
-}
+}*/
 
 .mainwrapper{
   /* text-align:center; */
