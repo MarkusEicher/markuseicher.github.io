@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Workfile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1326.75 1326.75">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1313ab;
+      }
+
+      .cls-2 {
+        fill: #ffc636;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="664.5" cy="665.25" r="640"/>
+  <path class="cls-2" d="m1021.55,516.11c0,128.82-104.43,233.25-233.25,233.25s-233.25-104.43-233.25-233.25,104.43-233.25,233.25-233.25,233.25,104.43,233.25,233.25Z"/>
+</svg>

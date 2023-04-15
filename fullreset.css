@@ -60,10 +60,10 @@ table {
 }
 
 /* Added by Markus Eicher to have links without any styling upfront */
-a {
+/* a {
 	text-decoration: none;
 	list-style: none;
-	/* display: inline-block; */
-	/* color:black; */
-}
+	display: inline-block;
+	color:black;
+} */
 /* End of full reset following Myers. */
