@@ -91,27 +91,27 @@ header {
   margin: 5px;
 }
 
-.navlist ul{
-  /* list-style-type: none; */
-  /* border: 2px solid violet; */
-  /* padding: 0; */
-  /* margin: 0; */
-  /* background-color: black; */
-  /* text-align: center; */
-  /* color:var(--tertiary); */
+.navlist{
+  list-style-type: none;
+  border: 2px solid violet;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  text-align: center;
+  color:var(--tertiary);
 }
 
 .navlist li{
   list-style-type: none;
-  /* display: inline; */
-  /* border: 2px solid black; */
+  display: block;
+  border: 2px solid rgb(255, 255, 255);
   /* margin: 5px; */
   /* position: relative; */
   /* color:crimson; */
 }
 
 .navlist li a{
-  border: 2px solid darkmagenta;
+  /* border: 2px solid darkmagenta; */
   /* color:crimson; */
   width: 200px;
   display: block;

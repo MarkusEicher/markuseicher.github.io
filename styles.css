@@ -2,6 +2,8 @@
 :root{
   --primary: #FFC636;
   --secondary: #0A0B5B;
+/* Setting according to Thomas Steiner's Article */
+  color-scheme: dark light;
 }
 
 /* reset */
