@@ -4,9 +4,9 @@ basic colors and values that we want to be consistent during the whole process.
 */
 
 /* Start of variables definition */
-:root{
+:root {
   --primary: #CC9933;
-  --secondary:#1313AB;
+  --secondary: #1313AB;
   --tertiary: #288105;
 }
 
@@ -20,7 +20,7 @@ necessary if fonts are used from the web like Google Fonts or others.
   font-family: 'Roboto-light';
   font-weight: 300;
   src: url("/assets/fonts/roboto-light-webfont.woff2") format("woff2"),
-       url("/assets/fonts/roboto-light-webfont.woff") format("woff")
+    url("/assets/fonts/roboto-light-webfont.woff") format("woff")
 }
 
 @font-face {
@@ -28,21 +28,21 @@ necessary if fonts are used from the web like Google Fonts or others.
   font-weight: 300;
   font-style: italic;
   src: url("/assets/fonts/roboto-lightitalic-webfont.woff2") format("woff2"),
-       url("/assets/fonts/roboto-lightitalic-webfont.woff") format("woff")
+    url("/assets/fonts/roboto-lightitalic-webfont.woff") format("woff")
 }
 
 @font-face {
   font-family: 'Roboto';
   font-weight: 400;
   src: url("/assets/fonts/roboto-regular-webfont.woff2") format("woff2"),
-       url("/assets/fonts/roboto-regular-webfont.woff") format("woff")
+    url("/assets/fonts/roboto-regular-webfont.woff") format("woff")
 }
 
 @font-face {
   font-family: 'Roboto-medium';
   font-weight: 500;
   src: url("/assets/fonts/roboto-medium-webfont.woff2") format("woff2"),
-       url("/assets/fonts/roboto-medium-webfont.woff") format("woff")
+    url("/assets/fonts/roboto-medium-webfont.woff") format("woff")
 }
 
 @font-face {
@@ -50,14 +50,14 @@ necessary if fonts are used from the web like Google Fonts or others.
   font-weight: 500;
   font-style: italic;
   src: url("/assets/fonts/roboto-mediumitalic-webfont.woff2") format("woff2"),
-       url("/assets/fonts/roboto-mediumitalic-webfont.woff") format("woff")
+    url("/assets/fonts/roboto-mediumitalic-webfont.woff") format("woff")
 }
 
 @font-face {
   font-family: 'Roboto-bold';
   font-weight: 700;
   src: url("/assets/fonts/roboto-bold-webfont.woff2") format("woff2"),
-       url("/assets/fonts/roboto-bold-webfont.woff") format("woff")
+    url("/assets/fonts/roboto-bold-webfont.woff") format("woff")
 }
 
 @font-face {
@@ -65,7 +65,7 @@ necessary if fonts are used from the web like Google Fonts or others.
   font-weight: 700;
   font-style: italic;
   src: url("/assets/fonts/roboto-bolditalic-webfont.woff2") format("woff2"),
-       url("/assets/fonts/roboto-bolditalic-webfont.woff") format("woff")
+    url("/assets/fonts/roboto-bolditalic-webfont.woff") format("woff")
 }
 
 /* End of fonts definition */
@@ -77,154 +77,95 @@ viable experience with the webpage. The goal is to have a mobile first version o
 the page with all the necessary information readable on every device that can show 
 webpages. */
 
-body{
+body {
+  margin: 0;
   font-family: 'Roboto';
 }
 
-.mainwrapper{
+/* .mainwrapper{
   display: grid;
   grid-template-areas:
         'header'
-        'welcome'
+        'main'
         'bio'
         'quote'
         'learn'
         'footer';
-
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Key line */
-  /* grid-gap: 1rem; Spacing between grid items */
-}
+} */
 
 header {
-  /* border: 2px solid red; */
+  padding: 0 45px;
   /* margin: 5px; */
-  grid-area: header;
+  background-color: #283593;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navlist{
-  /* list-style-type: none; */
-  /* border: 2px solid violet; */
-  /* padding: 0; */
-  /* margin: 0; */
-  /* background-color: black; */
-  /* text-align: center; */
-  /* color:var(--tertiary); */
+header img {
+  width: 70px;
+  height: 70px;
+  object-fit: scale-down;
+  border-radius: 50%;
+  margin-left: 0;
+  padding-left: auto;
+  margin-right: auto;
 }
 
-.navlist li{
-  /* list-style-type: none; */
-  /* display: block; */
-  /* border: 2px solid rgb(255, 255, 255); */
-  /* margin: 5px; */
-  /* position: relative; */
-  /* color:crimson; */
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
 }
 
-.navlist li a{
-  /* border: 2px solid darkmagenta; */
-  /* color:crimson; */
-  /* width: 200px; */
-  /* display: block; */
-  /* text-transform: uppercase; */
-  /* font-family: 'Roboto-bold'; */
-  /* font-size: 1.2rem; */
-  /* text-decoration:none; */
-  /* text-align: center; */
-  /* padding: 20px; */
+nav li {
+  margin-left: 20px;
 }
 
-/* .navlist li:not(:first-child){
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  text-decoration:none;
-} */
-
-.navlist li:not(:first-child) a:hover{
-  /* color:#fff; */
-  /* background-color: var(--primary); */
-  
+nav a {
+  text-decoration: none;
+  color: white;
 }
 
-/* .navlist li:not(:first-child) a::before{
-  content: "";
-  display:block;
-  height:100%;
-  background-color: #000;
-  width:50px;
-  position:absolute;
-
-} */
-/* .navlist li:not(:first-child){
-  float: left;
-} */
-
-/* .navlist li::after {
-  content: "";
-  display:block;
-  clear:both;
-} */
-
-/* .navlist::after{
-  content: "";
-  display:block;
-  clear:both;
-} */
-
-/* .navitem{ */
-  /* background-color: red;
-  float:left;
-  width: 16%;
-  margin: 1%;
-  padding: 1%;
-  height: 50px; */
-  
-/* } */
-
-.navitem img{
-  /* width: 80%; */
-  /* max-height:2rem; */
+nav a:hover {
+  color: var(--primary);
 }
 
-.main{
+
+main {
   /* display: grid; */
   border: 2px solid blue;
-  /* margin: 20px 5px; */
+  padding: 5px;
+  margin: 20px 5px;
   /* grid-area: main; */
 }
 
-#welcome{
-  border: 2px solid pink;
-  /* margin: 20px 5px; */
-  grid-area: welcome;
-}
-
-#bio{
+#bio {
   border: 2px solid green;
-  /* margin: 20px 5px; */
-  grid-area: bio;
+  padding: 5px;
+  margin: 20px 5px;
+  /* grid-area: bio; */
 }
 
-#quote{
+#quote {
   border: 2px solid maroon;
+  padding: 5px;
   margin: 20px 5px;
-  grid-area: quote;
+  /* grid-area: quote; */
 }
 
-#learn{
+#learn {
   border: 2px solid darkorange;
+  padding: 5px;
   margin: 20px 5px;
-  grid-area: learn
+  /* grid-area: learn */
 }
 
 footer {
-  /* border: 2px solid brown; */
+  border: 2px solid green;
+  padding: 5px;
   margin: 20px 5px;
-  grid-area: footer;
+  /* grid-area: footer; */
 }
