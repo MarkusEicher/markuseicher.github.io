@@ -82,20 +82,9 @@ body {
   font-family: 'Roboto';
 }
 
-/* .mainwrapper{
-  display: grid;
-  grid-template-areas:
-        'header'
-        'main'
-        'bio'
-        'quote'
-        'learn'
-        'footer';
-} */
-
 header {
   padding: 0 45px;
-  /* margin: 5px; */
+  margin: 0;
   background-color: #283593;
   color: white;
   display: flex;
@@ -136,10 +125,36 @@ nav a:hover {
 
 main {
   /* display: grid; */
-  border: 2px solid blue;
-  padding: 5px;
-  margin: 20px 5px;
+  /* border: 2px solid blue; */
+  padding: 0;
+  margin: 0;
+  /* margin: 20px 5px; */
   /* grid-area: main; */
+}
+
+.hero {
+  /* border: 2px solid red; */
+  padding: 60px 34px;
+  /* margin: 20px 5px; */
+  background-color: #c5cae9;
+  color: black;
+  display: flex;
+  justify-content: center;
+  /* align-items: center */
+}
+
+.hero-inner {
+  /* border: 2px solid green; */
+  padding: 0;
+  margin: 0;
+  width: 75%;
+  /* margin: 20px 5px; */
+  /* grid-area: hero; */
+}
+
+.hero-inner p {
+  font-size: 1.18rem;
+  /* line-height: 1.6; */
 }
 
 #bio {
@@ -154,13 +169,6 @@ main {
   padding: 5px;
   margin: 20px 5px;
   /* grid-area: quote; */
-}
-
-#learn {
-  border: 2px solid darkorange;
-  padding: 5px;
-  margin: 20px 5px;
-  /* grid-area: learn */
 }
 
 footer {
