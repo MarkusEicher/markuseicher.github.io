@@ -134,7 +134,7 @@ main {
 
 .hero {
   /* border: 2px solid red; */
-  padding: 60px 34px;
+  padding: 60px 45px;
   /* margin: 20px 5px; */
   background-color: #c5cae9;
   color: black;
@@ -157,23 +157,64 @@ main {
   /* line-height: 1.6; */
 }
 
-#bio {
+.interests {
+  /* border: 2px solid maroon; */
+  padding: 60px 45px;
+  /* margin: 20px 5px; */
+  background-color: #e8eaf6;
+  color: black
+  /* grid-area: interests; */
+}
+
+.interests-inner {
+  /* border: 2px solid green; */
+  /* padding: 0; */
+  margin: 0 auto;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+#software {
   border: 2px solid green;
   padding: 5px;
   margin: 20px 5px;
   /* grid-area: bio; */
 }
 
-#quote {
+#creativity {
   border: 2px solid maroon;
   padding: 5px;
   margin: 20px 5px;
   /* grid-area: quote; */
 }
 
-footer {
+#sports {
+  border: 2px solid blue;
+  padding: 5px;
+  margin: 20px 5px;
+  /* grid-area: quote; */
+}
+
+#about {
+  border: 2px solid violet;
+  padding: 5px;
+  margin: 20px 5px;
+  /* grid-area: quote; */
+}
+
+#contact {
   border: 2px solid green;
   padding: 5px;
   margin: 20px 5px;
-  /* grid-area: footer; */
+  /* grid-area: quote; */
+}
+
+footer {
+  /* border: 2px solid green; */
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+  background-color: #283593;
 }
