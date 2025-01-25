@@ -4,9 +4,9 @@ basic colors and values that we want to be consistent during the whole process.
 */
 
 /* Start of variables definition */
-:root{
+:root {
   --primary: #CC9933;
-  --secondary:#1313AB;
+  --secondary: #1313AB;
   --tertiary: #288105;
 }
 
@@ -20,7 +20,7 @@ necessary if fonts are used from the web like Google Fonts or others.
   font-family: 'Roboto-light';
   font-weight: 300;
   src: url("/assets/fonts/roboto-light-webfont.woff2") format("woff2"),
-       url("/assets/fonts/roboto-light-webfont.woff") format("woff")
+    url("/assets/fonts/roboto-light-webfont.woff") format("woff")
 }
 
 @font-face {
@@ -28,21 +28,21 @@ necessary if fonts are used from the web like Google Fonts or others.
   font-weight: 300;
   font-style: italic;
   src: url("/assets/fonts/roboto-lightitalic-webfont.woff2") format("woff2"),
-       url("/assets/fonts/roboto-lightitalic-webfont.woff") format("woff")
+    url("/assets/fonts/roboto-lightitalic-webfont.woff") format("woff")
 }
 
 @font-face {
   font-family: 'Roboto';
   font-weight: 400;
   src: url("/assets/fonts/roboto-regular-webfont.woff2") format("woff2"),
-       url("/assets/fonts/roboto-regular-webfont.woff") format("woff")
+    url("/assets/fonts/roboto-regular-webfont.woff") format("woff")
 }
 
 @font-face {
   font-family: 'Roboto-medium';
   font-weight: 500;
   src: url("/assets/fonts/roboto-medium-webfont.woff2") format("woff2"),
-       url("/assets/fonts/roboto-medium-webfont.woff") format("woff")
+    url("/assets/fonts/roboto-medium-webfont.woff") format("woff")
 }
 
 @font-face {
@@ -50,14 +50,14 @@ necessary if fonts are used from the web like Google Fonts or others.
   font-weight: 500;
   font-style: italic;
   src: url("/assets/fonts/roboto-mediumitalic-webfont.woff2") format("woff2"),
-       url("/assets/fonts/roboto-mediumitalic-webfont.woff") format("woff")
+    url("/assets/fonts/roboto-mediumitalic-webfont.woff") format("woff")
 }
 
 @font-face {
   font-family: 'Roboto-bold';
   font-weight: 700;
   src: url("/assets/fonts/roboto-bold-webfont.woff2") format("woff2"),
-       url("/assets/fonts/roboto-bold-webfont.woff") format("woff")
+    url("/assets/fonts/roboto-bold-webfont.woff") format("woff")
 }
 
 @font-face {
@@ -65,7 +65,7 @@ necessary if fonts are used from the web like Google Fonts or others.
   font-weight: 700;
   font-style: italic;
   src: url("/assets/fonts/roboto-bolditalic-webfont.woff2") format("woff2"),
-       url("/assets/fonts/roboto-bolditalic-webfont.woff") format("woff")
+    url("/assets/fonts/roboto-bolditalic-webfont.woff") format("woff")
 }
 
 /* End of fonts definition */
@@ -77,130 +77,154 @@ viable experience with the webpage. The goal is to have a mobile first version o
 the page with all the necessary information readable on every device that can show 
 webpages. */
 
-body{
+body {
+  margin: 0;
   font-family: 'Roboto';
 }
 
-.mainwrapper{
-  /* text-align:center; */
-  
-}
-
 header {
-  border: 2px solid red;
-  margin: 5px;
+  padding: 0 45px;
+  /* margin: 0; */
+  background-color: #283593;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.navlist{
-  list-style-type: none;
-  border: 2px solid violet;
-  padding: 0;
-  margin: 0;
-  background-color: black;
-  text-align: center;
-  color:var(--tertiary);
+header img {
+  width: 70px;
+  height: 70px;
+  object-fit: scale-down;
+  border-radius: 50%;
+  margin: 0 auto;
 }
 
-.navlist li{
-  list-style-type: none;
-  display: block;
-  border: 2px solid rgb(255, 255, 255);
-  /* margin: 5px; */
-  /* position: relative; */
-  /* color:crimson; */
-}
-
-.navlist li a{
-  /* border: 2px solid darkmagenta; */
-  /* color:crimson; */
-  width: 200px;
-  display: block;
-  text-transform: uppercase;
-  font-family: 'Roboto-bold';
-  font-size: 1.2rem;
-  text-decoration:none;
-  text-align: center;
-  /* padding: 20px; */
-}
-
-/* .navlist li:not(:first-child){
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  text-decoration:none;
-} */
-
-.navlist li:not(:first-child) a:hover{
-  color:#fff;
-  background-color: var(--primary);
-  
-}
-
-/* .navlist li:not(:first-child) a::before{
-  content: "";
-  display:block;
-  height:100%;
-  background-color: #000;
-  width:50px;
-  position:absolute;
-
-} */
-/* .navlist li:not(:first-child){
-  float: left;
-} */
-
-/* .navlist li::after {
-  content: "";
-  display:block;
-  clear:both;
-} */
-
-/* .navlist::after{
-  content: "";
-  display:block;
-  clear:both;
-} */
-
-/* .navitem{ */
-  /* background-color: red;
-  float:left;
-  width: 16%;
-  margin: 1%;
-  padding: 1%;
-  height: 50px; */
-  
+/* nav { */
+  /* border: 2px solid red; */
+  /* display: flex; */
+  /* padding: 0; */
+  /* margin: 0; */
+  /* margin: 20px 5px; */
+  /* grid-area: nav; */
 /* } */
 
-.navitem img{
-  width: 80%;
-  /* max-height:2rem; */
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.main{
-  border: 2px solid blue;
-  margin: 20px 5px;
+nav ul li {
+  margin-left: 20px;
 }
 
-#bio{
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+nav ul li a:hover {
+  color: var(--primary);
+}
+
+
+main {
+  /* display: grid; */
+  /* border: 2px solid blue; */
+  padding: 0;
+  margin: 0;
+  /* margin: 20px 5px; */
+  /* grid-area: main; */
+}
+
+.hero {
+  /* border: 2px solid red; */
+  padding: 60px 45px;
+  /* margin: 20px 5px; */
+  background-color: #c5cae9;
+  color: black;
+  display: flex;
+  justify-content: center;
+  /* align-items: center */
+}
+
+.hero-inner {
+  /* border: 2px solid green; */
+  padding: 0;
+  margin: 0;
+  width: 75%;
+  /* margin: 20px 5px; */
+  /* grid-area: hero; */
+}
+
+.hero-inner p {
+  font-size: 1.18rem;
+  /* line-height: 1.6; */
+}
+
+.interests {
+  /* border: 2px solid maroon; */
+  padding: 60px 45px;
+  /* margin: 20px 5px; */
+  background-color: #e8eaf6;
+  color: black
+  /* grid-area: interests; */
+}
+
+.interests-inner {
+  /* border: 2px solid green; */
+  /* padding: 0; */
+  margin: 0 auto;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 25px;
+}
+
+#software {
   border: 2px solid green;
+  padding: 5px;
   margin: 20px 5px;
+  /* grid-area: bio; */
 }
 
-#quote{
+#creativity {
   border: 2px solid maroon;
+  padding: 5px;
   margin: 20px 5px;
+  /* grid-area: quote; */
 }
 
-#learn{
-  border: 2px solid darkorange;
+#sports {
+  border: 2px solid blue;
+  padding: 5px;
   margin: 20px 5px;
+  /* grid-area: quote; */
 }
 
-.sidebar {
+#about {
   border: 2px solid violet;
+  padding: 5px;
   margin: 20px 5px;
+  /* grid-area: quote; */
+}
+
+#contact {
+  border: 2px solid green;
+  padding: 5px;
+  margin: 20px 5px;
+  /* grid-area: quote; */
 }
 
 footer {
-  border: 2px solid brown;
-  margin: 20px 5px;
+  /* border: 2px solid green; */
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+  background-color: #283593;
 }
